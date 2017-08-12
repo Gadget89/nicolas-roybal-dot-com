@@ -1,25 +1,34 @@
 import React, { Component } from 'react';
+import Headroom from 'react-headroom'
 import './main.css';
 import Logo from './assets/new-logo.png';
 
+
 // Array of navigation buttons data
 const navButtons = [
+
   {
     id: "about",
-    link: "#about",
     name: "my story",
+    link: "#about",
     title: "Check out my story."
   },
   {
+    id: "skills",
+    name: "skills",
+    link: "#skills",
+    title: "Check out my skills."
+  },
+  {
     id: "projects",
-    link: "#projects",
     name: "projects",
+    link: "#projects",
     title: "Check out my projects"
   },
   {
     id: "contact",
-    link: "",
     name: "contact me",
+    link: "#contact",
     title: "Let's get in touch"
   },
   {
@@ -29,6 +38,7 @@ const navButtons = [
     title: "Check out my blog"
   }
 ]
+
 
 // Map through array and return a <li>
 const listItems = navButtons.map((button) =>
@@ -64,10 +74,11 @@ function closeNav() {
 
 class Nav extends Component {
 
+
   render() {
     return (
       <section>
-        <header>
+        <Headroom style={{zIndex: 50}}>
           <nav
             className="nav-container">
             <ul
@@ -110,7 +121,7 @@ class Nav extends Component {
             id="modal">
             {listItems}
           </ul>
-        </header>
+        </Headroom>
       </section>
     );
   }

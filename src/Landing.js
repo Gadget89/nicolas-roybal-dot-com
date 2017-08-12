@@ -33,14 +33,16 @@ class Landing extends Component {
 
   render() {
     return (
-      <main>
         <section>
+          <aside>
+            <a href="#skills" className="landing-button">scroll down to learn more!</a>
+          </aside>
           <img alt='' className="landing-hero-img" src={Hero}></img>
+            <aside className="landing-message">
+              <p id="change"></p>
+            </aside>
         </section>
-        <aside className="landing-message">
-          <p id="change"></p>
-        </aside>
-      </main>
+
     );
   }
 }

@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 import './main.css';
 import Me from './assets/NicHex.png'
 
+// <article className="about-container-back"></article>
+// <article className="about-container-front"></article>
+
 class About extends Component {
 
   render() {
     return (
-      <section>
-        <article className="about-container-back"></article>
-        <article className="about-container-front"></article>
+      <section className="about-wrapper">
+
           <article id="about" className="about-container">
             <h2 name="about" className="component-content-title">MY STORY</h2>
             <p className="about-content">
