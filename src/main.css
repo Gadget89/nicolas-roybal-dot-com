@@ -33,6 +33,7 @@ li {
   top: 0;
   left: 0;
   float: left;
+  margin-bottom: 2%;
   background:url(./assets/new-hero-photo.jpeg);
   background-position: left;
   background-size: cover;
@@ -222,7 +223,6 @@ li {
 
 /*About Me Section*/
 .about-container {
-  margin-top: 75%;
   position: relative;
   width: 100%;
   z-index: 3;
