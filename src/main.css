@@ -1,29 +1,25 @@
 /*Main CSS*/
 /*
 Color Pallet
-Blue: 3F51B5
-Light-grey:
-Yellow: FFC107
+Blue: #3F51B5
+Yellow: #FFC107
 */
 /*Global Styles*/
-/*main {
-  position: absolute;
-  min-width: 100%;
-}*/
 body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: helvetica;
-  /*min-height: auto;*/
   height: 100%;
   width: 100%;
   overflow-x: hidden;
   overflow-y: auto;
 }
+
 i {
   color: black;
 }
+
 i:hover{
   color: #FFC107;
   transition: 1s ;
@@ -31,31 +27,38 @@ i:hover{
 li {
   list-style: none;
 }
+
 #canvasoverlay {
   position: relative;
-  top: -812px;
+  top: 0;
   left: 0;
   float: left;
+  background:url(./assets/new-hero-photo.jpeg);
+  background-position: left;
+  background-size: cover;
+  z-index: 8;
 }
+
 .component-content-title {
-  border-bottom: solid 2px #FFC107;
+  border-bottom: 2px solid #FFC107;
+  /*Following commented out lines are experiment with gradient underlines*/
+  /*border-bottom: 2px solid transparent;*/
+  /*border-image: linear-gradient(to right, purple 22%, red 36%, orange 48%, yellow 63%, green 76%, blue) 1 100%;
+  border-image-slice: 1;*/
   margin: 3.5% auto;
   padding: 20px 0;
   text-align: center;
   text-transform: uppercase;
   width: 50%;
 }
+
 .hidden {
   display: none;
 }
+
 .page-content-container {
-  /*padding-top: 2%;*/
-  /*position: absolute;*/
   display: inline;
 }
-/*.page-content-container section {
-  padding-top: 2%;
-}*/
 
 /*Shared Navigation Styles*/
 .nav-background {
@@ -74,6 +77,7 @@ li {
   width: 100%;
   z-index: 11;
 }
+
 .nav-list-container {
   display: flex;
   margin: 36px auto;
@@ -91,7 +95,6 @@ li {
   font-size: 1.25em;
   font-weight: 500;
   margin-left: 30px;
-
 }
 
 .nav-list-container a {
@@ -100,10 +103,13 @@ li {
 }
 
 .nav-list-container li:hover {
+  border-bottom: 2px solid #FFC107;
   cursor: pointer;
   font-weight: bold;
   height: 15px;
-  border-bottom: solid 2px #FFC107;
+  /*border-bottom: 2px solid transparent;
+  border-image: linear-gradient(to right, purple 22%, red 36%, orange 48%, yellow 63%, green 76%, blue) 1 100%;*/
+  border-image-slice: 1;
   padding-bottom: 10px;
   animation: moveOut .35s linear;
   -webkit-animation: moveOut .35s linear;
@@ -197,25 +203,6 @@ li {
   text-transform: uppercase;
   border-radius: 50px;
 }
-.landing-hero-img {
-  margin-top: -92px;
-  /*filter: grayscale(100%);*/
-  /*-webkit-filter: grayscale(0%);
-  -webkit-animation: colorSplash 15s;
-  animation: colorSplash 15s;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;*/
-}
-
-/*@-webkit-keyframes colorSplash{
-    from {filter: grayscale(100%)}
-    to {filter: grayscale(0%);}
-}
-
-@keyframes colorSplash {
-    from {filter: grayscale(100%)}
-    to {filter: grayscale(0%)}
-}*/
 
 .landing-message p{
   color: white;
@@ -230,15 +217,18 @@ li {
   text-align: center;
   text-transform: uppercase;
   text-shadow: 2px 4px 3px black;
-  top: 20%;
+  top: 30%;
   z-index: 9;
 }
+
 /*About Me Section*/
 .about-container {
+  margin-top: 75%;
   position: relative;
   width: 100%;
   z-index: 3;
 }
+
 .about-container-back {
   -webkit-box-shadow: -1px 1px 24px 0 rgba(0,0,0,0.3);
   box-shadow: -1px 1px 24px 0 rgba(0,0,0,0.3);
@@ -251,6 +241,7 @@ li {
   width: 90%;
   z-index: -1;
 }
+
 .about-container-front {
   background-color: white;
   box-shadow: -1px 1px 24px 0 rgba(0,0,0,0.3);
@@ -260,6 +251,7 @@ li {
   width: 90%;
   z-index: 1;
 }
+
 .about-content {
   font-size: 1.5em;
   line-height: 2em;
@@ -272,19 +264,13 @@ li {
 .about-img-container {
   width: 100%;
 }
+
 .about-img-container img {
   display: block;
   margin: 10px auto;
-  /*transition: all .2s ease-in-out;*/
   width: 500px;
 }
-.about-wrapper {
-  position: absolute;
-}
-/*.about-img-container img:hover {
-  transform: scale(1.1);
-  transform: perspective();
-}*/
+
 /*Skills*/
 .skill-container {
   width: 33%;
@@ -293,10 +279,12 @@ li {
   transition: all .2s ease-in-out;
   width: 90%;
 }
+
 .skill-container:hover {
   transform: scale(1.1);
   transform: perspective();
 }
+
 .center-item {
   width: 90%;
   margin: 0 5%;
@@ -309,69 +297,74 @@ li {
   display: inline-block;
   transition: all .2s ease-in-out;
 }
+
 .slide-container:hover {
   transform: scale(1.1);
   transform: perspective();
 }
+
 .slides-container {
   display: inline-block;
-  /*margin: 5% auto;*/
-  margin-top: 18%;
   position: relative;
   width: 100%;
 }
 .slides-container:nth-child(even) {
-  margin-top: 0;
+  /*margin-top: 0;*/
 }
+
 .slide-content {
   font-size: 1.5em;
 }
+
 .slide-image {
   display: block;
   margin: 0 auto;
-  /*transition: all .2s ease-in-out;*/
   width: 80%;
 }
-/*.slide-image:hover {
-  transform: scale(1.2);
-  transform: perspective();
-}*/
+
 .slide-info {
   display: block;
   margin: 5%;
   text-align: center;
   width: 90%;
 }
+
 /*Contact*/
 .contact-message {
   font-size: 1.5em;
 }
+
 .contact-link {
   color: #FFC107;
   font-size: 2em;
 }
+
 /*Footer*/
 .footer-container {
   position: relative;
   height: 30%;
   width: 100%;
 }
+
 .footer-info {
   font-size: 1.5em;
   text-align: center;
   /*text-transform: uppercase;*/
 }
+
 .footer-link-container {
   margin: 0 auto;
   padding: 0;
   text-align: center;
   width: 90%;
 }
+
 .footer-link-container li, a {
   display: inline;
   margin: 10px;
   text-decoration: none;
 }
+
 .skills-change-text {
   /*line-height: 500px;*/
   text-align: center;
@@ -386,48 +379,55 @@ li {
   51%   { opacity: 1; }
   100%  { opacity: 1; }
 }
+
 .skills-change-text:after {
   color: #FFC107;
   content: '_';
   animation: blinking 1.2s infinite;
 }
+
 .skills-description {
   text-align: center;
 }
 
 @media only screen and (min-width: 1440px) {
   /*HD Desktop*/
-  #canvasoverlay {
-    top: -904px;
-  }
   .landing-message p {
     top: 34%;
   }
-  .slides-container {
-    margin-top: 10%;
-  }
 }
+
 @media only screen and (max-width: 1028px) {
   .landing-button {
+    display: none;
     left: 38%;
   }
 }
+
 @media only screen and (max-width: 1024px) {
   /*Mobile device screens*/
   html {
     overflow-x: hidden;
   }
+
   #canvasoverlay {
-    display: none;
+    /*display: none;*/
     /*top: -810px;*/
   }
-  .slides-container {
-    margin-top: 1200px;
+
+  .about-wrapper {
+    margin-top: 140%;
   }
+
+  .slides-container {
+    /*margin-top: 1200px;*/
+  }
+
   .close-mobile-nav {
     margin: 0;
     margin-left: -20%;
   }
+
   .landing-button {
     display: none;
   }
@@ -438,7 +438,6 @@ li {
     min-width: 100%;
     top: 30%;
   }
-
 
   .nav-list-container,
   .nav-list-container li {
@@ -452,7 +451,7 @@ li {
   .mobile-nav-menu-icon {
     display: inline;
     float: right;
-    margin: 18px 5%;
+    margin: 3% 4%;
     position: relative;
   }
 
@@ -460,26 +459,36 @@ li {
     font-size: 2em;
     height: auto;
   }
+
   .open-mobile-nav li {
     width: 18%;
   }
 }
-@media only screen and (max-width: 770px) {
-  .slides-container {
-    margin-top: 1200px;
+
+@media only screen and (max-width: 760px) {
+  .nav-background {
+    height: 200%;
+  }
+
+  .nav-logo {
+    margin: 4% 4%;
+  }
+
+  .mobile-nav-menu-icon {
+    margin: 5% 5%;
   }
 }
-@media only screen and (max-width: 420px) {
+
+@media only screen and (max-width: 480px) {
   /*Small mobile devices*/
-  /*h2 {
-    font-size: 3em;
-  }*/
-  /*p, li {
-    font-size: 2em;
-  }*/
+  .about-wrapper {
+    margin-top: 200%;
+  }
+
   .contact-link {
     font-size: 4em;
   }
+
   .contact-message {
     font-size: 3em;
   }
@@ -489,21 +498,18 @@ li {
     font-size: 2em;
   }
 
-  .slides-container {
-    margin-top: 100%;
-  }
-  .slide-container {
-    margin: 20px 0;
-  }
   .slide-content {
     font-size: 3em;
   }
+
   .component-content-title {
     font-size: 3em;
   }
+
   .page-content-container {
     position: absolute;
   }
+
   .about-content {
     font-size: 2.6em;
     /*line-height: 2em;*/
@@ -512,6 +518,7 @@ li {
     text-indent: 25px;
     width: 90%;
   }
+
   .about-container-back,
   .about-container-front {
     display: none;
@@ -521,25 +528,31 @@ li {
     margin-bottom: 10px;
     width: 90%;
   }
+
   .about-img-container img {
     width: 50%;
   }
+
   .landing-message p {
     top: 4%;
   }
+
   .slide-container {
     width: 100%;
     display: block;
   }
+
   .slide-links {
     font-size: 2em;
   }
+
   .skills-description {
     font-size: 3em;
   }
 }
-@media only screen and (max-width: 412px) {
-  .slides-container {
-    margin-top: 1800px;
+
+@media only screen and (max-width: 420px) {
+  .nav-background {
+    height: 125%;
   }
 }

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './main.css';
-import Hero from './assets/new-hero-photo.jpeg'
 
 class Landing extends Component {
   componentDidMount() {
@@ -16,7 +15,6 @@ class Landing extends Component {
           changeText(element, texts, time);
         }, time);
       }
-
     }
 
     var element = document.getElementById("change");
@@ -35,14 +33,19 @@ class Landing extends Component {
     return (
         <section>
           <aside>
-            <a href="#skills" className="landing-button">scroll down to learn more!</a>
+            <a
+              className="landing-button"
+              href="#skills">
+              scroll down to learn more!
+            </a>
           </aside>
-          <img alt='' className="landing-hero-img" src={Hero}></img>
-            <aside className="landing-message">
-              <p id="change"></p>
+            <aside
+              className="landing-message">
+              <p
+                id="change">
+              </p>
             </aside>
         </section>
-
     );
   }
 }
