@@ -11,9 +11,9 @@ class About extends Component {
     return (
       <section className="about-wrapper">
 
-          <article id="about" className="about-container">
+          <article className="about-container">
             <h2 name="about" className="component-content-title">MY STORY</h2>
-            <p className="about-content">
+            <p className="about-content" id="about">
               I began my journey to become a software developer in the Fall of 2016. I've had the great privilege to learn from accomplished instructors at The Iron Yard and I graduated from their Front-End Engineering program in February 2017.
             </p>
             <p className="about-content">
